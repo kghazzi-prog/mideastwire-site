@@ -791,30 +791,32 @@
 
         <hr class="trial-divider">
 
-        <label class="form-label" for="name">Name</label>
-        <input class="form-input" type="text" id="name" name="name" placeholder="Your full name">
+        <form onsubmit="return false;">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required>
 
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
 
-        <label class="form-label" for="role">Interested as</label>
-        <select class="form-select" id="role" name="role">
-          <option value="" disabled selected>Select your role…</option>
-          <option value="academic">Academic / Independent Research</option>
-          <option value="corporate">Corporate Research</option>
-          <option value="governmental">Governmental</option>
-        </select>
+          <label class="form-label" for="role">Interested as</label>
+          <select class="form-select" id="role" name="role" required>
+            <option value="" disabled selected>Select your role…</option>
+            <option value="academic">Academic / Independent Research</option>
+            <option value="corporate">Corporate Research</option>
+            <option value="governmental">Governmental</option>
+          </select>
 
-        <label class="form-check">
-          <input type="checkbox" name="consent">
-          <span>I agree to receive commercial information from MideastWire.com <a href="#" id="consent-toggle" onclick="toggleConsent(event)">[*read more]</a></span>
-        </label>
-        <div id="consent-text" style="display:none; font-size:11px; color:var(--text-mid); line-height:1.6; margin-top:-10px; margin-bottom:18px; padding:12px 14px; background:var(--off-white); border-radius:3px; border:1px solid var(--lavender);">
-          Consent is voluntary. I have the right to withdraw my consent at any time (data are processed until the withdrawal of consent). I have the right to access, rectify, delete or limit processing of the data, the right to object, the right to submit a complaint to the supervisory authority or transfer the data. The administrator is MideastWire.com. The administrator processes data following the Privacy Policy.
-        </div>
+          <label class="form-check">
+            <input type="checkbox" name="consent" required>
+            <span>I agree to receive commercial information from MideastWire.com <a href="#" id="consent-toggle" onclick="toggleConsent(event)">[*read more]</a></span>
+          </label>
+          <div id="consent-text" style="display:none; font-size:11px; color:var(--text-mid); line-height:1.6; margin-top:-10px; margin-bottom:18px; padding:12px 14px; background:var(--off-white); border-radius:3px; border:1px solid var(--lavender);">
+            Consent is voluntary. I have the right to withdraw my consent at any time (data are processed until the withdrawal of consent). I have the right to access, rectify, delete or limit processing of the data, the right to object, the right to submit a complaint to the supervisory authority or transfer the data. The administrator is MideastWire.com. The administrator processes data following the Privacy Policy.
+          </div>
 
-        <button class="btn-gold" type="button">START MY FREE TRIAL →</button>
-        <p class="trial-reassurance">No credit card required &nbsp;·&nbsp; Cancel anytime</p>
+          <button class="btn-gold" type="submit">START MY FREE TRIAL →</button>
+          <p class="trial-reassurance">No credit card required &nbsp;·&nbsp; Cancel anytime</p>
+        </form>
       </div>
 
     </div>
