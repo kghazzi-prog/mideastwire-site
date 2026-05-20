@@ -149,8 +149,8 @@
 
     .hero-inner {
       position: relative; z-index: 1;
-      width: 100%; padding-block: 140px 80px;
-      display: grid; grid-template-columns: 1fr 420px; gap: 72px; align-items: center;
+      width: 100%; padding-block: 100px 28px;
+      display: grid; grid-template-columns: 1fr 420px; gap: 56px; align-items: center;
     }
 
     /*  hero left  */
@@ -186,11 +186,11 @@
     .trial-card {
       background: #fff;
       border-radius: 10px;
-      padding: 40px 36px;
+      padding: 26px 28px;
       box-shadow: 0 40px 100px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
     }
     .trial-badge {
-      display: inline-flex; align-items: center; gap: 7px; margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 7px; margin-bottom: 12px;
       padding: 6px 14px; background: rgba(30,190,116,.1); border-radius: 999px;
       border: 1px solid rgba(30,190,116,.35);
       font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
@@ -201,61 +201,44 @@
       background: var(--green); flex-shrink: 0;
     }
     .trial-card h3 {
-      font-size: 21px; color: var(--purple); margin-bottom: 8px; line-height: 1.3;
-    }
-    .trial-sub {
-      font-size: 12px; color: var(--text-dim); margin-bottom: 20px;
-    }
-    .trial-perks {
-      display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px;
-    }
-    .trial-perks li {
-      display: flex; align-items: center; gap: 9px;
-      font-size: 12px; color: var(--text-mid); line-height: 1.4;
-    }
-    .trial-perks li::before {
-      content: ''; flex-shrink: 0; width: 16px; height: 16px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231ebe74'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/contain no-repeat;
-    }
-    .trial-divider {
-      border: none; border-top: 1px solid var(--lavender); margin-bottom: 22px;
+      font-size: 18px; color: var(--purple); margin-bottom: 18px; line-height: 1.3;
     }
 
     .form-label {
       display: block; font-size: 10px; font-weight: 700;
       letter-spacing: .15em; text-transform: uppercase;
-      color: var(--text-mid); margin-bottom: 8px;
+      color: var(--text-mid); margin-bottom: 6px;
     }
     .form-input {
-      width: 100%; padding: 11px 14px;
+      width: 100%; padding: 9px 12px;
       background: var(--off-white); border: 1.5px solid var(--lavender);
       border-radius: 3px; color: var(--text);
       font-family: 'Ubuntu', sans-serif; font-size: 13px;
-      margin-bottom: 18px; transition: border-color .2s;
+      margin-bottom: 12px; transition: border-color .2s;
     }
     .form-input::placeholder { color: var(--text-dim); }
     .form-input:focus { outline: none; border-color: var(--purple); }
 
     .form-select {
-      width: 100%; padding: 11px 14px;
+      width: 100%; padding: 9px 12px;
       background: var(--off-white); border: 1.5px solid var(--lavender);
       border-radius: 3px; color: var(--text);
       font-family: 'Ubuntu', sans-serif; font-size: 13px;
-      margin-bottom: 18px; cursor: pointer; appearance: none;
+      margin-bottom: 12px; cursor: pointer; appearance: none;
       transition: border-color .2s;
     }
     .form-select:focus { outline: none; border-color: var(--purple); }
     .form-select option { background: #fff; color: var(--text); }
 
     .form-check {
-      display: flex; align-items: flex-start; gap: 11px; margin-bottom: 22px;
+      display: flex; align-items: flex-start; gap: 11px; margin-bottom: 16px;
     }
     .form-check input { accent-color: var(--purple); width: 14px; height: 14px; margin-top: 3px; flex-shrink: 0; cursor: pointer; }
     .form-check span { font-size: 11px; color: var(--text-mid); line-height: 1.55; }
     .form-check a { color: var(--purple); }
 
     .btn-gold {
-      display: block; width: 100%; padding: 16px;
+      display: block; width: 100%; padding: 13px;
       background: var(--green); color: var(--black); border: none; border-radius: 4px;
       font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 700;
       letter-spacing: .16em; text-transform: uppercase; cursor: pointer;
@@ -264,7 +247,19 @@
     }
     .btn-gold:hover { background: #17a862; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,190,116,.45); }
     .trial-reassurance {
-      text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 12px; letter-spacing: .04em;
+      text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 10px; letter-spacing: .04em;
+    }
+
+    .hero-perks {
+      display: flex; flex-direction: column; gap: 11px; margin-top: 28px;
+    }
+    .hero-perks li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: rgba(255,255,255,.75); font-weight: 300;
+    }
+    .hero-perks li::before {
+      content: ''; flex-shrink: 0; width: 17px; height: 17px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231ebe74'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/contain no-repeat;
     }
 
     /* ═══════════════════════════════════════
@@ -767,7 +762,12 @@
           <em>20 YEARS</em>
           of Translating<br>the Arab Media
         </h1>
-        <a href="#about" class="hero-scroll">
+        <ul class="hero-perks">
+          <li>Daily briefing in your inbox, Monday–Friday</li>
+          <li>85,000+ translations from 150+ sources</li>
+          <li>Full searchable database from day one</li>
+        </ul>
+        <a href="#about" class="hero-scroll" style="margin-top:28px;">
           <span class="scroll-ring">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
               <path d="M6 1v10M2 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -781,15 +781,6 @@
       <div class="trial-card" id="trial">
         <span class="trial-badge">FREE 2-WEEK TRIAL</span>
         <h3>Sign Up for a 2-Week Trial of our Daily Briefing!</h3>
-        <p class="trial-sub">Trusted by researchers at Harvard, Stanford, LSE and more</p>
-
-        <ul class="trial-perks">
-          <li>Daily briefing in your inbox, Monday–Friday</li>
-          <li>85,000+ translations from 150+ sources</li>
-          <li>Full searchable database from day one</li>
-        </ul>
-
-        <hr class="trial-divider">
 
         <form onsubmit="return false;">
           <label class="form-label" for="name">Name</label>
