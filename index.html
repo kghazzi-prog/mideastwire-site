@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20 Years of Translating the Arab Media | Free Trial | MideastWire.com</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/og-image.jpg">
+
+  <!-- Primary meta -->
+  <meta name="description" content="20 years of curated Arab media translations. Daily briefing for researchers, journalists and diplomats. 85,000+ translations from 150+ sources across 22 Arab countries. Free 2-week trial.">
+  <meta name="author" content="MideastWire.com">
+
+  <!-- Open Graph  Facebook, WhatsApp, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mideastwire20years.com/">
+  <meta property="og:title" content="20 Years of Translating the Arab Media | MideastWire.com">
+  <meta property="og:description" content="20 years of curated Arab media translations. Daily briefing for researchers, journalists and diplomats. 85,000+ translations from 150+ sources across 22 Arab countries. Free 2-week trial.">
+  <meta property="og:image" content="https://www.mideastwire20years.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="MideastWire.com">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@NoeNicholas">
+  <meta name="twitter:title" content="20 Years of Translating the Arab Media | MideastWire.com">
+  <meta name="twitter:description" content="20 years of curated Arab media translations. Daily briefing for researchers, journalists and diplomats. 85,000+ translations from 150+ sources across 22 Arab countries. Free 2-week trial.">
+  <meta name="twitter:image" content="https://www.mideastwire20years.com/assets/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --purple:      #3a1abc;
+      --purple-deep: #2b0d96;
+      --lavender:    #d4d1de;
+      --lavender-lt: #eceaf3;
+      --green:       #1ebe74;
+      --white:       #ffffff;
+      --off-white:   #f8f8fb;
+      --black:       #111111;
+      --text:        #1c1c2e;
+      --text-mid:    #4a4a65;
+      --text-dim:    #8a8a9a;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Ubuntu', sans-serif; font-weight: 300; color: var(--text); background: var(--off-white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Ubuntu', sans-serif; font-weight: 700; line-height: 1.15; }
+    ul { list-style: none; }
+
+    /* ── LAYOUT HELPERS ── */
+    .container { max-width: 1160px; margin-inline: auto; padding-inline: 48px; }
+
+    /* ═══════════════════════════════════════
+       NAVBAR
+    ═══════════════════════════════════════ */
+    .nav {
+      position: fixed; inset-block-start: 0; inset-inline: 0; z-index: 900;
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(43,13,150,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212,209,222,0.12);
+      transition: padding .3s, background .3s;
+    }
+    .nav.shrunk { padding: 13px 48px; background: rgba(43,13,150,0.98); }
+
+    .nav-logo img { height: 54px; width: auto; filter: brightness(0) invert(1); }
+    .nav-logo-text {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 26px; font-weight: 700; color: #fff; letter-spacing: .02em;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.65); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--lavender); }
+
+    .nav-btn {
+      padding: 9px 22px;
+      background: var(--lavender); color: var(--purple) !important;
+      font-weight: 700 !important; border-radius: 2px; letter-spacing: .12em !important;
+      transition: background .2s !important;
+    }
+    .nav-btn:hover { background: var(--lavender-lt) !important; color: var(--purple-deep) !important; }
+
+    /* mobile hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+    }
+    .hamburger span { width: 24px; height: 2px; background: rgba(255,255,255,.7); border-radius: 2px; transition: .3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 0;
+      position: fixed; inset-block-start: 68px; inset-inline: 0; z-index: 899;
+      background: rgba(43,13,150,.98); border-top: 1px solid rgba(212,209,222,.1);
+      padding: 24px 32px 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 13px 0;
+      font-size: 14px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.65); border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: color .2s;
+    }
+    .mobile-menu a:hover { color: var(--lavender); }
+    .mobile-menu .mob-btn {
+      margin-top: 20px; text-align: center; padding: 13px 0;
+      background: var(--lavender); color: var(--purple); font-weight: 700;
+      border-radius: 2px; border: none;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      min-height: 100svh;
+      background: var(--purple);
+      position: relative;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+      opacity: .28;
+    }
+    .hero-vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 65% 50%, rgba(58,26,188,.15) 0%, rgba(43,13,150,.65) 65%);
+    }
+
+    .hero-inner {
+      position: relative; z-index: 1;
+      width: 100%; padding-block: 140px 80px;
+      display: grid; grid-template-columns: 1fr 420px; gap: 72px; align-items: center;
+    }
+
+    /*  hero left  */
+    .hero-kicker {
+      font-size: 10px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+      color: var(--lavender); display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
+    }
+    .hero-kicker::before {
+      content: ''; display: block; width: 32px; height: 1px; background: var(--lavender);
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 4vw, 62px); font-weight: 700;
+      color: #fff; margin-bottom: 32px; letter-spacing: -.01em;
+    }
+    .hero-title em { color: var(--lavender); font-style: italic; display: block; }
+
+    .hero-scroll {
+      display: inline-flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,.4); font-size: 11px; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase; transition: color .2s;
+    }
+    .hero-scroll:hover { color: var(--lavender); }
+    .scroll-ring {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1px solid rgba(212,209,222,.35);
+      display: flex; align-items: center; justify-content: center;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+    @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+    /*  trial card  */
+    .trial-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px 36px;
+      box-shadow: 0 40px 100px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
+    }
+    .trial-badge {
+      display: inline-flex; align-items: center; gap: 7px; margin-bottom: 16px;
+      padding: 6px 14px; background: rgba(30,190,116,.1); border-radius: 999px;
+      border: 1px solid rgba(30,190,116,.35);
+      font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--green);
+    }
+    .trial-badge::before {
+      content: ''; display: block; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0;
+    }
+    .trial-card h3 {
+      font-size: 21px; color: var(--purple); margin-bottom: 8px; line-height: 1.3;
+    }
+    .trial-sub {
+      font-size: 12px; color: var(--text-dim); margin-bottom: 20px;
+    }
+    .trial-perks {
+      display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px;
+    }
+    .trial-perks li {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 12px; color: var(--text-mid); line-height: 1.4;
+    }
+    .trial-perks li::before {
+      content: ''; flex-shrink: 0; width: 16px; height: 16px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231ebe74'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+    .trial-divider {
+      border: none; border-top: 1px solid var(--lavender); margin-bottom: 22px;
+    }
+
+    .form-label {
+      display: block; font-size: 10px; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      color: var(--text-mid); margin-bottom: 8px;
+    }
+    .form-input {
+      width: 100%; padding: 11px 14px;
+      background: var(--off-white); border: 1.5px solid var(--lavender);
+      border-radius: 3px; color: var(--text);
+      font-family: 'Ubuntu', sans-serif; font-size: 13px;
+      margin-bottom: 18px; transition: border-color .2s;
+    }
+    .form-input::placeholder { color: var(--text-dim); }
+    .form-input:focus { outline: none; border-color: var(--purple); }
+
+    .form-select {
+      width: 100%; padding: 11px 14px;
+      background: var(--off-white); border: 1.5px solid var(--lavender);
+      border-radius: 3px; color: var(--text);
+      font-family: 'Ubuntu', sans-serif; font-size: 13px;
+      margin-bottom: 18px; cursor: pointer; appearance: none;
+      transition: border-color .2s;
+    }
+    .form-select:focus { outline: none; border-color: var(--purple); }
+    .form-select option { background: #fff; color: var(--text); }
+
+    .form-check {
+      display: flex; align-items: flex-start; gap: 11px; margin-bottom: 22px;
+    }
+    .form-check input { accent-color: var(--purple); width: 14px; height: 14px; margin-top: 3px; flex-shrink: 0; cursor: pointer; }
+    .form-check span { font-size: 11px; color: var(--text-mid); line-height: 1.55; }
+    .form-check a { color: var(--purple); }
+
+    .btn-gold {
+      display: block; width: 100%; padding: 16px;
+      background: var(--green); color: var(--black); border: none; border-radius: 4px;
+      font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: .16em; text-transform: uppercase; cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(30,190,116,.35);
+    }
+    .btn-gold:hover { background: #17a862; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,190,116,.45); }
+    .trial-reassurance {
+      text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 12px; letter-spacing: .04em;
+    }
+
+    /* ═══════════════════════════════════════
+       MOSAIC
+    ═══════════════════════════════════════ */
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 4px solid var(--green);
+    }
+
+    .mosaic-cell {
+      min-height: 340px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .mosaic-text {
+      background: var(--white);
+      padding: 48px 40px; text-align: center;
+    }
+    .mosaic-text h3 {
+      font-size: clamp(20px, 2.2vw, 28px); font-weight: 700;
+      color: var(--black); line-height: 1.25;
+    }
+
+    .mosaic-photo {
+      position: relative;
+      background-size: cover; background-position: center;
+      overflow: hidden;
+    }
+    .mosaic-photo::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.38);
+    }
+    .mosaic-topic {
+      position: relative; z-index: 1;
+      font-size: clamp(36px, 5vw, 68px); font-weight: 700; font-style: italic;
+      color: #fff; text-align: center; line-height: 1;
+      text-shadow: 0 2px 16px rgba(0,0,0,.4);
+    }
+
+    /* ═══════════════════════════════════════
+       TOPICS STRIP
+    ═══════════════════════════════════════ */
+    .topics {
+      background: var(--purple-deep);
+      padding: 36px 0;
+    }
+    .topics-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .topic {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 11px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+    }
+    .topic-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lavender); flex-shrink: 0; }
+    .topic-rule { width: 1px; height: 28px; background: rgba(255,255,255,.1); }
+
+    /* ═══════════════════════════════════════
+       DATABASE / BRIEFING
+    ═══════════════════════════════════════ */
+    .briefing { padding: 100px 0; background: var(--white); }
+
+    .briefing-content { max-width: 640px; }
+    .briefing-content h2 { font-size: clamp(30px,3vw,44px); color: var(--purple); margin-bottom: 32px; }
+
+    .check-list { display: flex; flex-direction: column; gap: 15px; }
+    .check-list li {
+      display: flex; align-items: flex-start; gap: 13px;
+      font-size: 14px; color: var(--text-mid); line-height: 1.55;
+    }
+    .check-list li::before {
+      content: '';
+      flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%233a1abc'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+
+    /* ═══════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════ */
+    .about { padding: 100px 0; background: var(--lavender); }
+
+    .about-inner { display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start; }
+
+    .about-sticky { position: sticky; top: 110px; }
+    .about-sticky h2 { font-size: clamp(36px,3.5vw,52px); color: var(--purple); margin-bottom: 28px; }
+    .about-kicker {
+      font-size: 10px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+      color: var(--purple); display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+    }
+    .about-kicker::before {
+      content: ''; display: block; width: 32px; height: 1px; background: var(--purple);
+    }
+    .about-logo {
+      height: 52px; width: auto; margin-bottom: 28px;
+    }
+    .about-sticky img.map-img { width: 100%; border-radius: 4px; margin-top: 0; }
+    .about-sticky .map-placeholder {
+      width: 100%; aspect-ratio: 4/3; margin-top: 28px;
+      background: linear-gradient(135deg, var(--purple) 0%, #5a3ad0 100%);
+      border-radius: 4px;
+    }
+
+    .about-body p {
+      font-size: 15.5px; font-weight: 300; color: var(--text); line-height: 1.9; margin-bottom: 26px;
+    }
+    .about-body p:last-of-type { margin-bottom: 0; }
+    .about-body a {
+      color: var(--purple); font-weight: 500;
+      border-bottom: 1px solid var(--green);
+      transition: color .2s;
+    }
+    .about-body a:hover { color: var(--purple-deep); }
+    .about-body strong { color: var(--black); font-weight: 700; }
+
+    .twitter-follow {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 10px 20px;
+      background: #e8e8e8; color: #111;
+      border-bottom: none;
+      border-radius: 999px;
+      font-size: 13px; font-weight: 700; font-family: 'Ubuntu', sans-serif;
+      text-decoration: none; transition: background .2s;
+    }
+    .twitter-follow:hover { background: #d4d4d4; color: #111; }
+    .twitter-follow svg { flex-shrink: 0; }
+
+    .about-actions {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 32px;
+    }
+
+    .cta-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 26px;
+      border: 1.5px solid var(--purple); border-radius: 2px;
+      font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--purple); transition: all .2s;
+    }
+    .cta-link:hover { background: var(--purple); color: var(--white); border-bottom: none; }
+
+    .logo-grid {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 40px 64px; margin-bottom: 64px;
+    }
+    .logo-grid img {
+      height: 52px; width: auto; object-fit: contain;
+      filter: brightness(0) invert(1) opacity(.5);
+      transition: filter .25s;
+    }
+    .logo-grid img:hover { filter: brightness(0) invert(1) opacity(1); }
+
+    /* ═══════════════════════════════════════
+       STATS
+    ═══════════════════════════════════════ */
+    .stats { padding: 90px 0; background: var(--purple); }
+
+    .stats-header { margin-bottom: 56px; }
+    .stats-header h2 { font-size: clamp(28px,3vw,42px); color: #fff; max-width: 620px; line-height: 1.25; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-bottom: 0; }
+
+    .stat-cell {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(212,209,222,.1);
+      padding: 48px 36px; text-align: center;
+    }
+    .stat-num {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 68px; font-weight: 700; color: var(--lavender); line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-lbl {
+      font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+    }
+
+    .stats-bullets {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .stats-bullet {
+      padding: 28px 24px;
+      border-right: 1px solid rgba(255,255,255,.07);
+      font-size: 13px; font-weight: 300; color: rgba(255,255,255,.6); line-height: 1.6;
+    }
+    .stats-bullet:last-child { border-right: none; }
+
+    /* ═══════════════════════════════════════
+       TSP
+    ═══════════════════════════════════════ */
+    .tsp { padding: 100px 0; background: var(--off-white); }
+
+    .tsp-header {
+      margin-bottom: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
+    }
+    .tsp-header h2 { font-size: clamp(34px,3.5vw,52px); color: var(--purple); }
+
+    .tsp-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+    .tsp-visual img {
+      width: 100%; border-radius: 8px;
+      box-shadow: 0 24px 64px rgba(58,26,188,.2);
+    }
+
+    .tsp-right { display: flex; flex-direction: column; gap: 40px; }
+
+    .tsp-text p {
+      font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.88; margin-bottom: 22px;
+    }
+    .tsp-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px;
+      border: 1.5px solid var(--purple); border-radius: 2px;
+      font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--purple); transition: all .2s;
+    }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+
+    .btn-outline.gold-border { border-color: var(--green); color: var(--purple); }
+    .btn-outline.gold-border:hover { background: var(--green); color: var(--black); border-color: var(--green); }
+
+    .tsp-cards { display: flex; flex-direction: column; gap: 16px; }
+
+    .tsp-card {
+      display: flex; gap: 18px; padding: 22px 24px;
+      background: var(--lavender-lt); border-radius: 4px;
+      border-left: 3px solid var(--green);
+    }
+    .tsp-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--purple); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+    }
+    .tsp-card p { font-size: 13px; font-weight: 400; color: var(--text); line-height: 1.55; }
+
+    /* ═══════════════════════════════════════
+       PRICING
+    ═══════════════════════════════════════ */
+    .pricing { padding: 100px 0; background: var(--lavender); }
+
+    .pricing-head { margin-bottom: 56px; }
+    .pricing-head h2 { font-size: clamp(32px,3.5vw,50px); color: var(--purple); }
+
+    .pricing-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+
+    .price-card {
+      background: var(--purple);
+      border: 1px solid rgba(212,209,222,.2); border-radius: 6px; overflow: hidden;
+    }
+    .price-card-top {
+      background: rgba(255,255,255,.1); padding: 26px 32px;
+      border-bottom: 1px solid rgba(212,209,222,.15);
+    }
+    .price-card-top h3 {
+      font-family: 'Ubuntu', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--lavender); margin-bottom: 10px;
+    }
+    .discount-tag {
+      display: inline-block; padding: 4px 10px;
+      background: var(--purple-deep); border-radius: 2px;
+      font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--lavender);
+    }
+
+    .price-card-body { padding: 32px; }
+
+    .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+    .price-was {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 26px; font-weight: 300; color: rgba(255,255,255,.25); text-decoration: line-through;
+    }
+    .price-sym { font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 700; color: var(--lavender); align-self: flex-start; margin-top: 10px; }
+    .price-now { font-family: 'Ubuntu', sans-serif; font-size: 66px; font-weight: 700; color: var(--lavender); line-height: 1; }
+
+    .price-save { font-size: 12px; font-weight: 300; color: rgba(255,255,255,.5); margin-bottom: 3px; }
+    .price-month { font-size: 12px; font-weight: 300; color: rgba(255,255,255,.5); margin-bottom: 28px; }
+    .price-month strong { color: rgba(255,255,255,.8); font-weight: 700; }
+
+    .price-list { display: flex; flex-direction: column; gap: 13px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .price-list li {
+      display: flex; align-items: center; gap: 11px;
+      font-size: 13px; font-weight: 300; color: rgba(255,255,255,.7);
+    }
+    .price-list li::before {
+      content: ''; flex-shrink: 0; width: 17px; height: 17px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23d4d1de'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+    .price-list li strong { color: #fff; font-weight: 700; }
+
+    .price-license {
+      font-size: 11px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.3); margin-bottom: 22px;
+    }
+    .price-social {
+      font-size: 13px; font-weight: 300; color: rgba(255,255,255,.55); line-height: 1.6; margin-bottom: 20px;
+    }
+    .btn-gold-full {
+      display: block; width: 100%; padding: 14px; text-align: center;
+      background: var(--lavender); color: var(--purple); border-radius: 3px;
+      font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      transition: background .2s;
+    }
+    .btn-gold-full:hover { background: var(--lavender-lt); }
+
+    .price-card-org {
+      background: linear-gradient(150deg, #0d0530 0%, #1a0a5e 50%, #0d1a3e 100%);
+      border: 1px solid rgba(30,190,116,.35);
+      border-radius: 6px; overflow: hidden; position: relative;
+      display: flex; flex-direction: column;
+    }
+    .price-card-org::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--green);
+    }
+    .price-card-org .price-card-top {
+      background: rgba(30,190,116,.07);
+      border-bottom: 1px solid rgba(30,190,116,.15);
+      cursor: default;
+    }
+    .price-card-org .price-card-top h3 { color: var(--green); }
+    .org-header {
+      display: inline-block;
+      transition: transform .3s ease;
+      transform-origin: left top;
+    }
+    .price-card-org .price-card-top:hover .org-header { transform: scale(1.1); }
+    .org-badge {
+      display: inline-block; padding: 4px 10px;
+      background: var(--green); color: var(--black);
+      border-radius: 2px; font-size: 9px; font-weight: 700;
+      letter-spacing: .16em; text-transform: uppercase;
+    }
+    .price-card-org .price-card-body {
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .org-price-label {
+      font-size: 42px; font-weight: 700; color: var(--green);
+      line-height: 1; margin-bottom: 8px;
+    }
+    .org-price-sub {
+      font-size: 12px; font-weight: 300; color: rgba(255,255,255,.45);
+      letter-spacing: .06em; margin-bottom: 28px;
+    }
+    .org-divider {
+      border: none; border-top: 1px solid rgba(30,190,116,.15); margin-bottom: 20px;
+    }
+    .org-note {
+      font-size: 11px; font-weight: 300; color: rgba(255,255,255,.4);
+      line-height: 1.6; margin-top: auto; padding-top: 20px; margin-bottom: 20px;
+    }
+    .btn-org-full {
+      display: block; width: 100%; padding: 14px; text-align: center;
+      background: var(--green); color: var(--black); border-radius: 3px;
+      font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      transition: background .2s;
+    }
+    .btn-org-full:hover { background: #17a862; }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer { background: var(--purple-deep); padding: 64px 0 40px; }
+
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.07);
+      margin-bottom: 36px;
+    }
+
+    .footer-brand img { height: 34px; margin-bottom: 18px; filter: brightness(0) invert(1); opacity: 0.85; }
+
+    .footer-col-title {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--lavender); margin-bottom: 18px; display: block;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 11px; }
+    .footer-col li { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.5); }
+    .footer-col a { color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-col a:hover { color: var(--lavender); }
+
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-copy { font-size: 11px; font-weight: 300; color: rgba(255,255,255,.28); }
+
+    .footer-socials { display: flex; gap: 12px; }
+    .footer-socials a {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(212,209,222,.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.4); transition: all .2s;
+    }
+    .footer-socials a:hover { border-color: var(--green); color: var(--green); }
+
+    /* ═══════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════ */
+    .fade-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .container { padding-inline: 32px; }
+
+      .hero-inner { grid-template-columns: 1fr; gap: 52px; padding-block: 120px 80px; }
+      .hero-title { font-size: clamp(32px, 6vw, 52px); }
+
+      .mosaic { grid-template-columns: 1fr; }
+      .mosaic-cell { min-height: 260px; }
+
+.about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-sticky { position: static; }
+
+      .stats-grid { grid-template-columns: 1fr; gap: 2px; }
+      .stats-bullets { grid-template-columns: 1fr 1fr; }
+
+      .tsp-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .pricing-layout { grid-template-columns: 1fr; }
+
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+
+      .nav { padding: 16px 32px; }
+      .nav.shrunk { padding: 11px 32px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding-inline: 20px; }
+
+      .pillars { padding: 72px 0; }
+      .briefing, .about, .tsp, .pricing { padding: 72px 0; }
+      .stats { padding: 64px 0; }
+
+      .stats-bullets { grid-template-columns: 1fr; }
+
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 18px; text-align: center; }
+
+      .topics-inner { gap: 24px; }
+      .topic-rule { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <img src="assets/images/logo.png" alt="MideastWire.com"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none;">MideastWire.com</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#database">Database</a></li>
+      <li><a href="#tsp">Taliban Sources</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#trial" class="nav-btn">Free Trial</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mob-link">About</a>
+    <a href="#database" class="mob-link">Database</a>
+    <a href="#tsp" class="mob-link">Taliban Sources</a>
+    <a href="#pricing" class="mob-link">Pricing</a>
+    <a href="#trial" class="mob-btn">Free Trial</a>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-vignette"></div>
+
+
+    <div class="hero-inner container">
+
+      <!-- left -->
+      <div class="hero-content">
+        <p class="hero-kicker">MideastWire.com</p>
+        <h1 class="hero-title">
+          <em>20 YEARS</em>
+          of Translating<br>the Arab Media
+        </h1>
+        <a href="#about" class="hero-scroll">
+          <span class="scroll-ring">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M6 1v10M2 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          LEARN MORE
+        </a>
+      </div>
+
+      <!-- right: trial form -->
+      <div class="trial-card" id="trial">
+        <span class="trial-badge">FREE 2-WEEK TRIAL</span>
+        <h3>Start Reading the Arab World's Media  Today</h3>
+        <p class="trial-sub">Trusted by researchers at Harvard, Stanford, LSE and more</p>
+
+        <ul class="trial-perks">
+          <li>Daily briefing in your inbox, Monday–Friday</li>
+          <li>85,000+ translations from 150+ sources</li>
+          <li>Full searchable database from day one</li>
+        </ul>
+
+        <hr class="trial-divider">
+
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" type="text" id="name" name="name" placeholder="Your full name">
+
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com">
+
+        <label class="form-label" for="role">Interested as</label>
+        <select class="form-select" id="role" name="role">
+          <option value="" disabled selected>Select your role…</option>
+          <option value="academic">Academic / Individual</option>
+          <option value="independent">Independent Research</option>
+          <option value="corporate">Corporate Research</option>
+          <option value="governmental">Governmental</option>
+        </select>
+
+        <label class="form-check">
+          <input type="checkbox" name="consent">
+          <span>I agree to receive commercial information from MideastWire.com <a href="#" id="consent-toggle" onclick="toggleConsent(event)">[*read more]</a></span>
+        </label>
+        <div id="consent-text" style="display:none; font-size:11px; color:var(--text-mid); line-height:1.6; margin-top:-10px; margin-bottom:18px; padding:12px 14px; background:var(--off-white); border-radius:3px; border:1px solid var(--lavender);">
+          Consent is voluntary. I have the right to withdraw my consent at any time (data are processed until the withdrawal of consent). I have the right to access, rectify, delete or limit processing of the data, the right to object, the right to submit a complaint to the supervisory authority or transfer the data. The administrator is MideastWire.com. The administrator processes data following the Privacy Policy.
+        </div>
+
+        <button class="btn-gold" type="button">START MY FREE TRIAL →</button>
+        <p class="trial-reassurance">No credit card required &nbsp;·&nbsp; Cancel anytime</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ MOSAIC ══════════ -->
+  <section class="mosaic">
+    <div class="mosaic-cell mosaic-text fade-up">
+      <h3>reduce the language disconnect</h3>
+    </div>
+    <div class="mosaic-cell mosaic-photo fade-up" style="background-image:url('assets/images/briefing-photo.jpg')">
+      <span class="mosaic-topic">political</span>
+    </div>
+    <div class="mosaic-cell mosaic-text fade-up">
+      <h3>gain deeper insights into Arab world affairs</h3>
+    </div>
+    <div class="mosaic-cell mosaic-photo fade-up" style="background-image:url('assets/images/hero-bg.jpg')">
+      <span class="mosaic-topic">opinion</span>
+    </div>
+    <div class="mosaic-cell mosaic-text fade-up">
+      <h3>listen to Arab voices directly without a filter</h3>
+    </div>
+    <div class="mosaic-cell mosaic-photo fade-up" style="background-image:url('assets/images/newspaper-photo.jpg')">
+      <span class="mosaic-topic">economic</span>
+    </div>
+  </section>
+
+  <!-- ══════════ TOPICS STRIP ══════════ -->
+  <div class="topics">
+    <div class="container">
+      <div class="topics-inner">
+        <div class="topic"><span class="topic-dot"></span> Political</div>
+        <div class="topic-rule"></div>
+        <div class="topic"><span class="topic-dot"></span> Economic</div>
+        <div class="topic-rule"></div>
+        <div class="topic"><span class="topic-dot"></span> Opinion</div>
+        <div class="topic-rule"></div>
+        <div class="topic"><span class="topic-dot"></span> 22 Arab Countries &amp; the Diaspora</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ DATABASE / BRIEFING ══════════ -->
+  <section class="briefing" id="database">
+    <div class="container">
+      <div class="briefing-content fade-up">
+        <h2>ACCESS our database?</h2>
+        <ul class="check-list">
+          <li>Curated "Daily Briefing" for your inbox (Mon-Fri)</li>
+          <li>High quality translations with links to the originals</li>
+          <li>Key political, cultural, economic and opinion pieces</li>
+          <li>Covering the media of the 22 Arab countries and the Diaspora</li>
+        </ul>
+        <a href="mailto:info@mideastwire.com" class="cta-link" style="margin-top:32px;">
+          Contact Us
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-sticky fade-up">
+          <h2>ABOUT MideastWire.com</h2>
+          <img src="assets/images/map.png" alt="Arab World"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div class="map-placeholder" style="display:none;"></div>
+        </div>
+        <div class="about-body fade-up">
+          <p>When we began our effort in Beirut in 2005, reliable translations of the Arab media were generally only available through high-priced services or <a href="https://www.theguardian.com/world/2005/sep/28/worlddispatch.brianwhitaker" target="_blank" rel="noopener">politically biased</a> ones that provided narrow snapshots of an otherwise rich landscape of news and opinion. eighteen years later, we continue to offer our affordable, curated "Daily Briefing" of translations for our subscribers - a service we believe helps to reduce at least a modest part of the language disconnect impeding understanding, informed engagement and policy.</p>
+          <p>Further to this end, and after all of these years we have also managed to amass an extensive searchable database with more than 4,000 Daily Briefings and 85,000 individual translations from over 150 separate media sources, all coded according to subject area and country. If you are interested in gaining a deeper insight into the affairs of the wider region, we encourage you to sign up for a two-week free trial <a href="#trial">Here</a></p>
+          <p>During our 2025 anniversary year, new individual and organizational subscribers will benefit from a 25% price reduction, bringing the cost for an unaffiliated, single-use license down to $150 for the next year of full access, including, of course, to our database.</p>
+          <p>For Organizational License inquiries <a href="mailto:info@mideastwire.com">Click Here</a></p>
+          <p><strong>Join us this year!</strong></p>
+          <div class="about-actions">
+            <a href="https://x.com/NoeNicholas" target="_blank" rel="noopener" class="twitter-follow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Follow @NoeNicholas
+            </a>
+            <a href="#trial" class="cta-link">
+              Start Free Trial
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ STATS ══════════ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-header fade-up">
+        <h2>Join hundreds of researchers, journalists and diplomats accessing MideastWire's Database</h2>
+      </div>
+      <div class="logo-grid">
+        <img src="assets/images/logo-harvard.png" alt="Harvard University">
+        <img src="assets/images/logo-stanford.png" alt="Stanford University">
+        <img src="assets/images/logo-columbia.png" alt="Columbia University">
+        <img src="assets/images/logo-cornell.png" alt="Cornell University">
+        <img src="assets/images/logo-brown.png" alt="Brown University">
+        <img src="assets/images/logo-upenn.png" alt="University of Pennsylvania">
+        <img src="assets/images/logo-gwu.png" alt="George Washington University">
+        <img src="assets/images/logo-syracuse.png" alt="Syracuse University">
+        <img src="assets/images/logo-lse.png" alt="London School of Economics">
+        <img src="assets/images/logo-london.png" alt="University of London">
+        <img src="assets/images/logo-berlin.png" alt="Freie Universität Berlin">
+        <img src="assets/images/logo-ruhr.png" alt="Ruhr Universität Bochum">
+        <img src="assets/images/logo-ecfr.png" alt="European Council on Foreign Relations">
+        <img src="assets/images/logo-economist-impact.png" alt="Economist Impact">
+        <img src="assets/images/logo-unifil.png" alt="UNIFIL">
+        <img src="assets/images/logo-washington-post.png" alt="The Washington Post">
+        <img src="assets/images/logo-eu-globe.png" alt="EU">
+      </div>
+      <div class="stats-grid">
+        <div class="stat-cell fade-up">
+          <div class="stat-num">+3,800</div>
+          <div class="stat-lbl">Daily Briefings</div>
+        </div>
+        <div class="stat-cell fade-up">
+          <div class="stat-num">+75,000</div>
+          <div class="stat-lbl">Individual Translations</div>
+        </div>
+        <div class="stat-cell fade-up">
+          <div class="stat-num">+150</div>
+          <div class="stat-lbl">Separate Media Sources</div>
+        </div>
+      </div>
+      <div class="stats-bullets">
+        <div class="stats-bullet fade-up">Curated "Daily Briefing" for your inbox (Mon-Fri)</div>
+        <div class="stats-bullet fade-up">High quality translations with links to the originals</div>
+        <div class="stats-bullet fade-up">Key political, cultural, economic and opinion pieces</div>
+        <div class="stats-bullet fade-up">Covering the media of the 22 Arab countries and the Diaspora</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TSP ══════════ -->
+  <section class="tsp" id="tsp">
+    <div class="container">
+      <div class="tsp-header fade-up">
+        <h2>Free Access to the Taliban Source Project</h2>
+        <div class="tsp-actions">
+          <a href="https://www.hf.uio.no/ikos/english/research/taliban-sources-repository/" target="_blank" rel="noopener" class="btn-outline gold-border">FREE LOGIN</a>
+          <a href="https://s3-eu-west-1.amazonaws.com/landingi-editor-uploads/9yDCFQW8/TSP_Index.pdf" target="_blank" rel="noopener" class="btn-outline">DOWNLOAD INDEX</a>
+        </div>
+      </div>
+      <div class="tsp-inner">
+        <div class="tsp-visual fade-up">
+          <img src="assets/images/tsp-cover.png" alt="The Taliban Source Project">
+        </div>
+        <div class="tsp-right">
+          <div class="tsp-text fade-up">
+            <p>Even if you don't choose a free Mideastwire.com trial, please take a moment to discover what we believe is a unique and extraordinary public repository of high-quality translations: The Taliban Sources Project (TSP). Through a partnership with Thesigers, the Norwegian Defense Research Establishment (FFI) and the University of Oslo, Mideastwire.com has translated and is now making available 1,452 separate translations drawn from nine years of the Taliban's Arabic language magazine, Al-Samood (Issues 1-99 / 2006 to 2014), which together constitute the overwhelming bulk of the TSP database.</p>
+            <p>Unfortunately, the TSP as a whole and our translations of Al-Samood specifically were only made available this year because of what we believe was a fundamental misunderstanding of the project and its implication.</p>
+            <p>Indeed, several years ago, the British Library, which was supposed to serve as the main repository, judged that the archive contained some material which could contravene the Terrorism Act. Thankfully, the University of Oslo recently stepped up and hosted the project, thereby recognizing how publicly available, high-quality translations – especially of one's purported adversary – can actually lead to greater understanding and, potentially, peace-building.</p>
+          </div>
+          <div class="tsp-cards fade-up">
+            <div class="tsp-card">
+              <div class="tsp-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                </svg>
+              </div>
+              <div>
+                <p>Browse the TSP collection by keyword, source, date or time period</p>
+              </div>
+            </div>
+            <div class="tsp-card">
+              <div class="tsp-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+                </svg>
+              </div>
+              <div>
+                <p>Browse by type, such as decree, editorial, interview, news, and more</p>
+              </div>
+            </div>
+            <div class="tsp-card">
+              <div class="tsp-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 5h18M3 12h18M3 19h18"/>
+                </svg>
+              </div>
+              <div>
+                <p>Available in Arabic, Dari, English, Farsi and Pashto</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRICING ══════════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-head fade-up">
+        <h2>ACCESS our searchable database?</h2>
+      </div>
+      <div class="pricing-layout">
+        <div class="price-card fade-up">
+          <div class="price-card-top">
+            <h3>1 Year  Unaffiliated License</h3>
+            <span class="discount-tag">BENEFIT FROM OUR 25% ANNIVERSARY DISCOUNT</span>
+          </div>
+          <div class="price-card-body">
+            <div class="price-row">
+              <span class="price-was">$200</span>
+              <span class="price-sym">$</span>
+              <span class="price-now">150</span>
+            </div>
+            <p class="price-save">You save 25%</p>
+            <p class="price-month">(only <strong>$12.5 / month</strong>)</p>
+            <ul class="price-list">
+              <li><strong>One</strong>&nbsp;user account</li>
+              <li><strong>+3,800</strong>&nbsp;Daily Briefings &amp; <strong>+75,000</strong>&nbsp;individual translations</li>
+              <li>Access to our full <strong>searchable database</strong></li>
+              <li><strong>+150</strong>&nbsp;Separate media sources</li>
+              <li>Curated "Daily Briefing" for your inbox (Mon-Fri)</li>
+              <li>High quality translations with links to the originals</li>
+              <li>Covering the media of the 22 Arab countries and the Diaspora</li>
+            </ul>
+            <p class="price-social">Join hundreds of researchers, journalists and diplomats accessing MideastWire's Database</p>
+            <a href="#trial" class="btn-gold-full">Start Free Trial</a>
+          </div>
+        </div>
+        <div class="price-card price-card-org fade-up">
+          <div class="price-card-top">
+            <div class="org-header">
+              <h3>Organizational License</h3>
+              <span class="org-badge">INSTITUTIONAL ACCESS</span>
+            </div>
+          </div>
+          <div class="price-card-body">
+            <div class="org-price-label">Custom</div>
+            <p class="org-price-sub">Pricing tailored to your institution</p>
+            <ul class="price-list">
+              <li>Everything in the Individual plan</li>
+              <li><strong>Unlimited users</strong>&nbsp;access for your team</li>
+              <li><strong>Open-IP access</strong></li>
+              <li>Dedicated onboarding &amp; support</li>
+              <li>Suitable for universities, think-tanks, government &amp; media</li>
+            </ul>
+            <hr class="org-divider">
+            <p class="org-note">Trusted by Harvard, LSE, Columbia, the Washington Post and more.</p>
+            <a href="mailto:info@mideastwire.com" class="btn-org-full">Inquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="MideastWire.com"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Contact</span>
+          <ul>
+            <li><a href="mailto:info@mideastwire.com">info@mideastwire.com</a></li>
+            <li>Beirut, Lebanon</li>
+            <li><a href="mailto:info@mideastwire.com">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Follow</span>
+          <ul>
+            <li><a href="https://x.com/NoeNicholas" target="_blank" rel="noopener">twitter: @NoeNicholas</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© MideastWire.com  Beirut, Lebanon</p>
+        <div class="footer-socials">
+          <a href="https://x.com/NoeNicholas" target="_blank" rel="noopener" aria-label="Twitter / X">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Consent read more toggle
+    function toggleConsent(e) {
+      e.preventDefault();
+      const box = document.getElementById('consent-text');
+      const link = document.getElementById('consent-toggle');
+      const visible = box.style.display !== 'none';
+      box.style.display = visible ? 'none' : 'block';
+      link.textContent = visible ? '[*read more]' : '[*read less]';
+    }
+
+    // Navbar shrink on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('shrunk', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('in'), i * 90);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
