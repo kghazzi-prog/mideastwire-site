@@ -326,8 +326,15 @@
     ═══════════════════════════════════════ */
     .briefing { padding: 100px 0; background: var(--white); }
 
+    .briefing-inner {
+      display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center;
+    }
     .briefing-content { max-width: 640px; }
     .briefing-content h2 { font-size: clamp(30px,3vw,44px); color: var(--purple); margin-bottom: 32px; }
+    .briefing-image {
+      max-height: 380px; width: auto; border-radius: 6px;
+      box-shadow: 0 16px 48px rgba(58,26,188,.15);
+    }
 
     .check-list { display: flex; flex-direction: column; gap: 15px; }
     .check-list li {
@@ -854,20 +861,23 @@
   <!-- ══════════ DATABASE / BRIEFING ══════════ -->
   <section class="briefing" id="database">
     <div class="container">
-      <div class="briefing-content fade-up">
-        <h2>ACCESS our database?</h2>
-        <ul class="check-list">
-          <li>Curated "Daily Briefing" for your inbox (Mon-Fri)</li>
-          <li>High quality translations with links to the originals</li>
-          <li>Key political, cultural, economic and opinion pieces</li>
-          <li>Covering the media of the 22 Arab countries and the Diaspora</li>
-        </ul>
-        <a href="mailto:info@mideastwire.com" class="cta-link" style="margin-top:32px;">
-          Contact Us
-          <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+      <div class="briefing-inner">
+        <div class="briefing-content fade-up">
+          <h2>ACCESS our database?</h2>
+          <ul class="check-list">
+            <li>Curated "Daily Briefing" for your inbox (Mon-Fri)</li>
+            <li>High quality translations with links to the originals</li>
+            <li>Key political, cultural, economic and opinion pieces</li>
+            <li>Covering the media of the 22 Arab countries and the Diaspora</li>
+          </ul>
+          <a href="mailto:info@mideastwire.com" class="cta-link" style="margin-top:32px;">
+            Contact Us
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <img src="assets/images/access-database.png" alt="ACCESS our database" class="briefing-image fade-up">
       </div>
     </div>
   </section>
