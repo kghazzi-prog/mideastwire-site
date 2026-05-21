@@ -701,7 +701,7 @@
       .mosaic { grid-template-columns: 1fr; }
       .mosaic-cell { min-height: 260px; }
 
-.about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
       .about-sticky { position: static; }
 
       .stats-grid { grid-template-columns: 1fr; gap: 2px; }
@@ -717,6 +717,12 @@
       .nav.shrunk { padding: 11px 32px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
+
+      /* Briefing visual: stack vertically, keep gif inside bounds */
+      .briefing-inner { grid-template-columns: 1fr; }
+      .briefing-visual { padding-bottom: 36px; }
+      .briefing-image { max-height: 260px; margin: 0 auto; }
+      .briefing-gif { width: 65%; left: 0; bottom: -24px; }
     }
 
     @media (max-width: 640px) {
@@ -733,6 +739,9 @@
 
       .topics-inner { gap: 24px; }
       .topic-rule { display: none; }
+
+      .briefing-image { max-height: 200px; }
+      .briefing-gif { width: 75%; }
     }
   </style>
 </head>
