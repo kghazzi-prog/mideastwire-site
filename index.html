@@ -808,7 +808,11 @@
         <span class="trial-badge">FREE 2-WEEK TRIAL</span>
         <h3>Sign Up for a 2-Week Trial of our Daily Briefing!</h3>
 
-        <form onsubmit="return false;">
+        <form action="https://formspree.io/f/xkoerwjz" method="POST">
+          <!-- Formspree config -->
+          <input type="hidden" name="_subject" value="New Free Trial Sign-Up — MideastWire.com">
+          <!-- Honeypot: bots fill this, humans don't -->
+          <input type="text" name="_gotcha" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" tabindex="-1" autocomplete="off">
           <label class="form-label" for="name">Name</label>
           <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required>
 
@@ -831,6 +835,7 @@
             Consent is voluntary. I have the right to withdraw my consent at any time (data are processed until the withdrawal of consent). I have the right to access, rectify, delete or limit processing of the data, the right to object, the right to submit a complaint to the supervisory authority or transfer the data. The administrator is MideastWire.com. The administrator processes data following the Privacy Policy.
           </div>
 
+          <input type="hidden" name="_next" value="https://kghazzi-prog.github.io/mideastwire-site/?submitted=true">
           <button class="btn-gold" type="submit">START MY FREE TRIAL →</button>
           <p class="trial-reassurance">No credit card required &nbsp;·&nbsp; Cancel anytime</p>
         </form>
