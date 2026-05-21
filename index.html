@@ -720,9 +720,9 @@
 
       /* Briefing visual: stack vertically, keep gif inside bounds */
       .briefing-inner { grid-template-columns: 1fr; }
-      .briefing-visual { padding-bottom: 36px; }
-      .briefing-image { max-height: 260px; margin: 0 auto; }
-      .briefing-gif { width: 65%; left: 0; bottom: -24px; }
+      .briefing-visual { padding-bottom: 0; }
+      .briefing-image { display: none; }
+      .briefing-gif { position: static; width: 100%; border-radius: 8px; }
     }
 
     @media (max-width: 640px) {
@@ -740,8 +740,7 @@
       .topics-inner { gap: 24px; }
       .topic-rule { display: none; }
 
-      .briefing-image { max-height: 200px; }
-      .briefing-gif { width: 75%; }
+      .briefing-gif { width: 100%; }
     }
   </style>
 </head>
