@@ -687,47 +687,61 @@
     @media (max-width: 1024px) {
       .container { padding-inline: 32px; }
 
-      .hero-inner { grid-template-columns: 1fr; gap: 52px; padding-block: 120px 80px; }
+      .nav { padding: 12px 20px; }
+      .nav.shrunk { padding: 10px 20px; }
+      .nav-logo img { height: 38px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; padding-block: 90px 48px; }
       .hero-title { font-size: clamp(32px, 6vw, 52px); }
+      .hero-scroll { display: none; }
 
       .mosaic { grid-template-columns: 1fr; }
-      .mosaic-cell { min-height: 260px; }
+      .mosaic-cell { min-height: 200px; }
+      .mosaic-photo { min-height: 160px; }
 
-      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-inner { grid-template-columns: 1fr; gap: 32px; }
       .about-sticky { position: static; }
+      .about-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .twitter-follow, .cta-link { width: 100%; justify-content: center; }
 
       .stats-grid { grid-template-columns: 1fr; gap: 2px; }
+      .stat-cell { padding: 32px 24px; }
+      .stat-num { font-size: 52px; }
+      .stats-header { margin-bottom: 36px; }
       .stats-bullets { grid-template-columns: 1fr 1fr; }
 
       .tsp-inner { grid-template-columns: 1fr; gap: 40px; }
+      .tsp-cards { flex-direction: column; }
 
       .pricing-layout { grid-template-columns: 1fr; }
 
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
 
-      .nav { padding: 16px 32px; }
-      .nav.shrunk { padding: 11px 32px; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-
-      /* Briefing visual: stack vertically, keep gif inside bounds */
+      .logo-grid { gap: 24px 32px; }
+      .logo-grid img { height: 40px; }
     }
 
     @media (max-width: 640px) {
       .container { padding-inline: 20px; }
 
-      .pillars { padding: 72px 0; }
-      .briefing, .about, .tsp, .pricing { padding: 72px 0; }
-      .stats { padding: 64px 0; }
+      .briefing, .about, .tsp, .pricing { padding: 64px 0; }
+      .stats { padding: 56px 0; }
 
       .stats-bullets { grid-template-columns: 1fr; }
 
-      .footer-top { grid-template-columns: 1fr; gap: 36px; }
-      .footer-bottom { flex-direction: column; gap: 18px; text-align: center; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 
-      .topics-inner { gap: 24px; }
+      .topics-inner { gap: 20px; }
       .topic-rule { display: none; }
 
+      .tsp-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .tsp-actions { width: 100%; }
+      .btn-outline { flex: 1; justify-content: center; }
+
+      .hero-perks li { font-size: 15px; }
     }
   </style>
 </head>
