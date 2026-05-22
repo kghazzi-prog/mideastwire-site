@@ -99,12 +99,26 @@
 
     /* mobile hamburger */
     .hamburger {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+      display: none; flex-direction: column; justify-content: center; align-items: flex-end;
+      gap: 5px; cursor: pointer;
+      width: 42px; height: 42px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 6px;
+      background: rgba(255,255,255,.06);
+      padding: 10px;
+      transition: background .2s, border-color .2s;
     }
-    .hamburger span { width: 24px; height: 2px; background: rgba(255,255,255,.7); border-radius: 2px; transition: .3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hamburger:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.35); }
+    .hamburger span {
+      display: block; height: 1.5px; background: #fff; border-radius: 2px;
+      transition: transform .3s ease, opacity .2s, width .3s;
+    }
+    .hamburger span:nth-child(1) { width: 20px; }
+    .hamburger span:nth-child(2) { width: 14px; }
+    .hamburger span:nth-child(3) { width: 20px; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); width: 20px; }
+    .hamburger.open span:nth-child(2) { opacity: 0; width: 20px; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); width: 20px; }
 
     .mobile-menu {
       display: none; flex-direction: column; gap: 0;
