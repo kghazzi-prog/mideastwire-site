@@ -832,6 +832,10 @@
           <label class="form-label" for="email">Email</label>
           <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
 
+          <label class="form-label" for="email-confirm">Confirm Email</label>
+          <input class="form-input" type="email" id="email-confirm" name="email_confirm" placeholder="your@email.com" required>
+          <p id="email-mismatch" style="display:none; color:#c0392b; font-size:11px; margin-top:-10px; margin-bottom:14px; letter-spacing:.05em;">Emails do not match — please check and try again.</p>
+
           <label class="form-label" for="role">Interested as</label>
           <select class="form-select" id="role" name="role" required>
             <option value="" disabled selected>Select your role…</option>
@@ -1156,6 +1160,19 @@
 
   <script>
     // Consent read more toggle
+    document.querySelector('form[action*="formspree"]').addEventListener('submit', function(e) {
+      const email = document.getElementById('email').value.trim();
+      const confirm = document.getElementById('email-confirm').value.trim();
+      const msg = document.getElementById('email-mismatch');
+      if (email !== confirm) {
+        e.preventDefault();
+        msg.style.display = 'block';
+        document.getElementById('email-confirm').focus();
+      } else {
+        msg.style.display = 'none';
+      }
+    });
+
     function toggleConsent(e) {
       e.preventDefault();
       const box = document.getElementById('consent-text');
